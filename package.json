@@ -1,0 +1,95 @@
+{
+  "name": "descriptify",
+  "version": "0.1.0",
+  "description": "Generate an HTML5 description list from CSV input.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run -s lint",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "eslint js/*.js",
+    "lint:styles": "stylelint css/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatislander/descriptify.git"
+  },
+  "keywords": [
+    "csv",
+    "definition",
+    "list",
+    "glossary"
+  ],
+  "author": "Ned Zimmerman <ned@bight.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greatislander/descriptify/issues"
+  },
+  "homepage": "https://github.com/greatislander/descriptify#readme",
+  "dependencies": {
+    "html5-boilerplate": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-plugin-import": "^2.8.0",
+    "prettier": "^1.9.1",
+    "prettier-eslint": "^8.2.5",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^8.3.1",
+    "stylelint-config-recommended": "^2.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true,
+      "es6": true,
+      "amd": true,
+      "browser": true,
+      "jquery": true
+    },
+    "globals": {
+      "Papa": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "globalReturn": true,
+        "generators": false,
+        "objectLiteralDuplicateProperties": false,
+        "experimentalObjectRestSpread": true
+      },
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "import"
+    ],
+    "settings": {
+      "import/core-modules": [],
+      "import/ignore": [
+        "node_modules",
+        "\\.(coffee|scss|css|less|hbs|svg|json)$"
+      ]
+    },
+    "rules": {
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "ignore"
+        }
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended",
+      "./node_modules/prettier-stylelint/config.js"
+    ],
+    "rules": {
+      "media-query-list-comma-space-after": "always-single-line"
+    }
+  }
+}

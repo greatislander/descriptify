@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Descriptify</title>
+        <meta name="description" content="Generate an HTML5 description list from CSV input.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body class="athelas flex flex-column justify-center items-center">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <h1 class="w-100 tc mt1 mb0">Descriptify</h1>
+        <p class="i f6 ph3 mb0">Generate an HTML5 <a class="link underline blue hover-dark-blue" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">description list</a> from CSV input.</p>
+        <section class="input flex flex-column justify-center items-center w-100 ph3">
+            <h2 class="mb1">Input (CSV)</h2>
+            <textarea class="input__field code w-100 mw7" name="input" rows="8"></textarea>
+        </section>
+        <section class="output  flex flex-column justify-center items-center w-100 ph3">
+            <h2 class="mb1">Output (HTML5)</h2>
+            <textarea class="output__field code w-100 mw7" name="output"  rows="10" readonly></textarea>
+        </section>
+        <p class="i f6 ph3">By <a class="link underline blue hover-dark-blue" href="https://github.com/greatislander">Ned</a>.</p>
+        <script src="https://unpkg.com/papaparse@4.3.6/papaparse.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
